@@ -584,3 +584,24 @@ body {
         font-size: 18px;
     }
 }
+
+ .footer {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      bottom: 0;
+      width: 100%;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .footer span {
+      font-weight: bold;
+      color: #00ffff;
+    }
