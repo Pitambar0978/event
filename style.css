@@ -605,3 +605,25 @@ body {
       font-weight: bold;
       color: #00ffff;
     }
+
+    .fest-name {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #0d6efd;
+}
+
+.highlighted {
+  color: #ff4081;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #555;
+}
