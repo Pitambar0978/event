@@ -39,3 +39,19 @@ createCountdown("count2", new Date(2025, 8, 6, 0, 0, 0).getTime()); //cosmetic p
 createCountdown("count3", new Date(2025, 8, 8, 0, 0, 0).getTime()); // Gaming
 createCountdown("count4", new Date(2025, 8, 1, 0, 0, 0).getTime());// Video Editing
 createCountdown("count5", new Date(2025, 8, 3, 0, 0, 0).getTime()); // Dance & singing
+
+
+// pop of hackethon apply now
+  function openModal() {
+    document.getElementById("rulesModals").style.display = "block";
+  }
+  function closeModal() {
+    document.getElementById("rulesModals").style.display = "none";
+  }
+  // Close when clicking outside modal
+  window.onclick = function(event) {
+    let modal = document.getElementById("rulesModals");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
