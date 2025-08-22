@@ -522,6 +522,15 @@ body {
       box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
     }
   }
-  .close-btn:hover {
-    background: #a71d2a;
-  }
+  .close {
+  position:none;
+  margin-left: 430px;
+  color: #1b1919;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}

@@ -41,16 +41,49 @@ createCountdown("count4", new Date(2025, 8, 1, 0, 0, 0).getTime());// Video Edit
 createCountdown("count5", new Date(2025, 8, 3, 0, 0, 0).getTime()); // Dance & singing
 
 
-// pop of hackethon apply now
+// Open Modal
   function openModal() {
     document.getElementById("rulesModals").style.display = "block";
   }
+
+  // Close Modal
   function closeModal() {
     document.getElementById("rulesModals").style.display = "none";
   }
+
   // Close when clicking outside modal
   window.onclick = function(event) {
     let modal = document.getElementById("rulesModals");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  
+// pop of hackethon apply now1
+  function openModal1() {
+    document.getElementById("rulesModals1").style.display = "block";
+  }
+  function closeModal1() {
+    document.getElementById("rulesModals1").style.display = "none";
+  }
+  // Close when clicking outside modal
+  window.onclick = function(event) {
+    let modal = document.getElementById("rulesModals1");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  // pop of hackethon apply now2
+  function openModal2() {
+    document.getElementById("rulesModals2").style.display = "block";
+  }
+  function closeModal2() {
+    document.getElementById("rulesModals2").style.display = "none";
+  }
+  // Close when clicking outside modal
+  window.onclick = function(event) {
+    let modal = document.getElementById("rulesModals1");
     if (event.target == modal) {
       modal.style.display = "none";
     }
