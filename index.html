@@ -16,11 +16,13 @@
 <div id="welcomePopup" class="welcome-popup">
   <div class="popup-content">
     <span class="close-btn" onclick="closeWelcomePopup()">&times;</span>
-    <div class="fest-name">🚀 Welcome to <span class="highlighted">MindMesh</span></div>
-    <div class="tagline">Where Brilliant Minds Interconnect</div>
-    <div class="prize-title">🔥 Grand Prize Pool 🔥</div>
-    <div class="prize-amount">Upto ₹ 1 Lakhs</div>
-    <div class="highlight">Win Big in Hackathon, Gaming, Dance & More!</div>
+    <div class="fest-name">🚀 Welcome to <span class="highlighted">Tech Mahotsav 2025</span></div>
+   <h2>at Sai Nath University</h2>
+          <p>In Collaboration with</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_VzzXi6_Dac8t5lQ_P9KgzeJkD5nvJY3oOQ&s" alt="GDG Logo">
+      <p>Sponsored by</p>
+      <h3>ABC Company</h3>
+
   </div>
 </div>
 
@@ -28,12 +30,18 @@
   <nav>
     <div class="nav1">
         <img src="/image/logo.png"  alt="Sai Nath University" class="logo">
+        <!-- WhatsApp Section -->
+<a href="https://wa.me/919876543210" target="_blank" class="whatsapp-link">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+       alt="WhatsApp" class="whatsapp-icon">
+  <span> <b>+91 9229569437</b></span>
+</a>
                <a href="https://www.sainathuniversity.com/" class="link">www.Sai  Nath University</a>
         <!-- Hamburger Menu for Mobile -->
-        <button class="menu-toggle">&#9776;</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
         
         <!-- Nav Links -->
-        <div class="nav-links">
+        <div class="nav-links" class="mobile-menu" id="mobileMenu">
             <a href="#home" class="heading">Home</a>
             <a href="#event" class="heading">Events</a>
             <a href="reg.html" class="heading">Registers</a>
@@ -46,6 +54,7 @@
 <div class="marque">
     <marquee>Welcome to the Event Manager! Stay Tuned For Latest Updates and Events.</marquee>
 </div>
+<section id="home">
     <!-- Hero Section -->
     <header>
         <h1>Sai Nath University Hackathon 2025 – Code. Create. Conquer.</h1>
@@ -94,7 +103,7 @@
     <!-- Event Details -->
     <section id="event">
         <h2>Event Details</h2>
-        <p><strong>Dates:</strong> 11th–13th September 2025</p>
+        <p><strong>Dates:</strong> 11th–12th September 2025</p>
         <p><strong>Venue:</strong> Sai Nath University, Ranchi</p>
         <p><strong>Eligibility:</strong> Students from any University of Ranchi</p>
         <p><strong>Team Size:</strong> 4–5 members</p>
@@ -236,13 +245,42 @@
 <br>
 <br>
 <hr class="divider">
+<div class=" event-heading">
+    <p> 5.Treasure Hunt </p>
+    <div id="count4" class="countdown"></div>
+    </div>
+ <div class="container1">
+    <img src="https://m.media-amazon.com/images/I/811TTAXfONL.jpg" alt="event-image">
+        <p>"A Treasure hunt game is being organized at Sai Nath University, Ranchi, for students of B.Sc. IT, BCA, B.Tech, and MCA. Students from all universities in Ranchi are welcome to participate. Interested candidates can fill out the registration form
+            to join the event."
+            <i><b>Read the details for more informations.</b></i><br>
+            <button class="btn" onclick="openModal()">Apply Now</button>
+            <a href="#"><button class="btn1">Details</button></a>
+        </p>
+        
+    </div>
+
+   <!-- Modal for Rules -->
+<div id="rulesModals3" class="modal">
+  <div class="modal-content">
+    
+      <span class="close" onclick="closeModal3()">&times;</span>
+   <center><h2>Rules</h2></center> 
+    <i>
+      <b>1:</b> Everyone should bring their own scuff.<br>
+      <b>2:</b> No prior video with editing allowed every participant should do on given date & Venue.<br> 
+    </i>
+      <br>
+   <center><a href="reg.html"><button class="btn">I Agree & Proceed</button></a></center> 
+  </div>
+</div>
 
 
 </section>
 <!-- Contact -->
     <section id="contact" >
         <h2>Contact Us</h2>
-        <p>Email: gd2066376@gmail.com.com</p>
+        <p> Email: <a href="mailto:techmahotsav25@gmail.com">techmahotsav25@gmail.com</a></p>
         <p>Phone: +91-9229569437, 6207601366</p>
         <p>Follow us on social media: <a href="https://www.facebook.com/share/1DFbJgauXH/"> Facebook </a> | 
              <a href="https://www.instagram.com/sainathuniversity_?igsh=cHI5aXpqNXAwd3Mw"> Instagram </a> | 
@@ -255,7 +293,7 @@
         <p>&copy 2025 Sai Nath University. All Right Reserved.</p>
         
   <div class="footer">
-    <p>Developed by <span>Pitambar Kumar Lal</span></p>
+    <p>This event is organized in collaboration with <span>Google Developer Groups (GDG)</span> & proudly sponsored by<span> ABC</span></p>
   </div>
 
     </footer>

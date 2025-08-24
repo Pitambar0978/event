@@ -1,7 +1,28 @@
   // Toggle menu on mobile
-    document.querySelector(".menu-toggle").addEventListener("click", function() {
-        document.querySelector(".nav-links").classList.toggle("active");
-    });
+ // JavaScript
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+// Toggle menu on button click
+menuToggle.addEventListener("click", (e) => {
+  e.stopPropagation(); // prevent immediate close
+  mobileMenu.classList.toggle("active");
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", (e) => {
+  if (mobileMenu.classList.contains("active") && !mobileMenu.contains(e.target) && e.target !== menuToggle) {
+    mobileMenu.classList.remove("active");
+  }
+});
+
+// Close menu when clicking any link
+document.querySelectorAll("#mobileMenu a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
+});
+
       // Show popup when page loads
     window.onload = function() {
       document.getElementById("welcomePopup").style.display = "block";
@@ -80,6 +101,20 @@ createCountdown("count5", new Date(2025, 8, 3, 0, 0, 0).getTime()); // Dance & s
   }
   function closeModal2() {
     document.getElementById("rulesModals2").style.display = "none";
+  }
+  // Close when clicking outside modal
+  window.onclick = function(event) {
+    let modal = document.getElementById("rulesModals1");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  // pop of hackethon apply now3
+  function openModal3() {
+    document.getElementById("rulesModals3").style.display = "block";
+  }
+  function closeModal3() {
+    document.getElementById("rulesModals3").style.display = "none";
   }
   // Close when clicking outside modal
   window.onclick = function(event) {

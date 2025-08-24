@@ -30,127 +30,144 @@ body {
       font-size: 24px;
     }
 
-    /* Main Popup (Prize Pool) */ 
-    .welcome-popup {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      margin-top: 150px;
-      margin-left: 200px;
-      width: 80%; height: 100%;
-      background: rgba(0,0,0,0.7);
+    /* Main Popup  */ 
+   .welcome-popup {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+    h1 {
+      margin: 10px 0;
+      color: #222;
+      font-size: 26px;
     }
 
-    .popup-content {
-      background: #fff;
-      color: #000;
-      margin: 10% auto;
-      padding: 40px 30px;
-      border-radius: 15px;
-      width: 50%;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-      position: relative;
-      animation: zoomIn 0.5s;
-    }
-
-    /* Close Button */
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 28px;
-      font-weight: bold;
-      color: #333;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .close-btn:hover {
-      color: red;
-    }
-
-    /* Prize Highlight */
-    .prize-title {
-      font-size: 28px;
-      font-weight: bold;
-      color: #ff5722;
-      margin-bottom: 15px;
-    }
-
-    .prize-amount {
-      font-size: 45px;
-      font-weight: bold;
-      color: #4caf50;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-      margin: 20px 0;
-    }
-
-    .highlight {
-      background: linear-gradient(to right, #ff9800, #f44336);
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 8px;
-      display: inline-block;
+    h2 {
+      margin: 8px 0;
+      color: #444;
       font-size: 20px;
-      margin-top: 15px;
     }
 
-    @keyframes zoomIn {
-      from { transform: scale(0.7); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+    p {
+      font-size: 16px;
+      color: #555;
+      margin: 5px 0;
     }
+}
 
-    /* 📱 Responsive for Mobile */
-    @media (max-width: 768px) {
-      .popup-content {
-        width: 80%;
-        padding: 25px 20px;
-      }
+/* Popup Box */
+.popup-content {
+  background: #fff;
+  color: #000;
+  margin: 10% auto;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 50%;
+  max-width: 600px; /* ✅ prevents it from growing too wide */
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  position: relative;
+  animation: zoomIn 0.5s;
+}
 
-      .prize-title {
-        font-size: 22px;
-      }
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-      .prize-amount {
-        font-size: 32px;
-      }
+.close-btn:hover {
+  color: red;
+}
 
-      .highlight {
-        font-size: 16px;
-        padding: 10px 15px;
-      }
+/* Prize Highlight */
+.prize-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff5722;
+  margin-bottom: 15px;
+}
 
-      h1 {
-        font-size: 20px;
-        padding: 15px;
-      }
-    }
+.prize-amount {
+  font-size: 45px;
+  font-weight: bold;
+  color: #4caf50;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  margin: 20px 0;
+}
 
-    @media (max-width: 480px) {
-      .popup-content {
-        width: 90%;
-        padding: 20px 15px;
-      }
+.highlight {
+  background: linear-gradient(to right, #ff9800, #f44336);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 15px;
+}
 
-      .prize-title {
-        font-size: 20px;
-      }
+/* Animation */
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 
-      .prize-amount {
-        font-size: 28px;
-      }
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .popup-content {
+    width: 80%;      /* ✅ take more space on smaller screens */
+    padding: 25px 20px;
+  }
 
-      .highlight {
-        font-size: 14px;
-        padding: 8px 12px;
-      }
+  .prize-title {
+    font-size: 22px;
+  }
 
-      .close-btn {
-        font-size: 24px;
-      }
-    }
+  .prize-amount {
+    font-size: 32px;
+  }
 
+  .highlight {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-content {
+    width: 75%;      /* ✅ full width on very small devices */
+    margin-top: 30%;
+    padding: 20px 15px;
+  }
+
+  .prize-title {
+    font-size: 20px;
+  }
+
+  .prize-amount {
+    font-size: 28px;
+  }
+
+  .highlight {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .close-btn {
+    font-size: 24px;
+  }
+}
+/* may be main  part*/
  header {
             color: white;
             padding: 40px 20px;
@@ -217,25 +234,68 @@ body {
     border: none;
     cursor: pointer;
     color: white;
-    margin-left: 10px;
-   width: 10%;
+    width: 10%;
+    margin-right: 15px;
 }
 
 /* Navigation bar */
 .nav1 { 
     background: linear-gradient(to right, rgb(239, 142, 142), rgb(240, 194, 108), rgb(235, 235, 118), rgb(155, 245, 155), rgb(144, 144, 241), rgb(206, 152, 245), rgb(240, 159, 240)); 
     height: 82px; 
-     width: 100%;
-     margin-top: 2px; 
+     width: 99.5%;
+     margin:5px 0px 0px 5px;
      display: flex; 
      align-items: center; 
      justify-content: space-between; 
      border-radius: 50px; 
     }
+    /* whatsapp */
+ .whatsapp-link {
+  display: flex;
+  align-items: center;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  width: fit-content;
+  transition: 0.3s;
+  flex-wrap: nowrap; /* ✅ Prevents icon & text from breaking line */
+}
+
+.whatsapp-link:hover {
+  background: #1ebd5a;
+}
+
+.whatsapp-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 600px) {
+
+  .whatsapp-icon {
+    width: 15px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  .whatsapp-link span {
+    font-size: 10px;
+    
+    white-space: nowrap; /* ✅ Forces text to stay in one line */
+  }
+}
 /* Logo */
 .logo {
-    height: 60px;
+    height: 70px;
     width: auto;
+    margin-left: 20px;
 }
 
 /* Navigation Links Container */
@@ -274,8 +334,9 @@ body {
     margin-top: 5px;
     border-radius: 50px;
     height: 28px;
-    width: 100%;
-    padding: 0 10px;
+    width: 99%;
+    margin-left: 5px;
+    
 }
 
 /* Marquee text */
@@ -392,7 +453,7 @@ body {
         }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .menu-toggle {
         display: block;
     }
@@ -502,50 +563,70 @@ body {
 }
 
   /* Modal Styling */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* dim background */
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 500px;
+  color: black;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  border: 1px solid #ff3300;
+  animation: glow 2s infinite alternate;
+  position: relative; /* ✅ Needed for close button positioning */
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
   }
-  .modal-content {
-    background:white;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 12px;
-    width: 80%;
-    max-width: 500px;
-    color: black;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-    border:1px solid #ff3300;
-    border-radius:10px;
-    animation: glow 2s infinite alternate;
-    
+  50% {
+    box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
   }
-     @keyframes glow {
-    0% {
-      box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
-    }
-    50% {
-      box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
-    }
-    100% {
-      box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
-    }
+  100% {
+    box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
   }
-  .close {
-  position:none;
-  margin-left: 430px;
+}
+
+/* Close Button */
+.close {
+  position: absolute; /* ✅ Always stays in the top-right */
+  top: 10px;
+  right: 15px;
   color: #1b1919;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .close:hover {
   color: red;
+}
+
+/* modal  Responsive Design  */
+@media (max-width: 600px) {
+  .modal-content {
+    width:70%;   /* almost full width */
+    margin: 20% auto; /* more margin for small screens */
+    padding: 15px;
+  }
+
+  .close {
+    font-size: 24px;
+    top: 8px;
+    right: 10px;
+  }
 }
